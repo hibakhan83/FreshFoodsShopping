@@ -1,2 +1,2 @@
-# FreshFoodsShopping
+# FreshFoods
 Online Grocery Shopping System
