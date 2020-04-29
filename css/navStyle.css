@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root{
+	--offset-color: #e6e6e6; /*light grey*/
+	--offset-color2: #bfbfbf;/*dark grey*/
+	--offset-color3: #E1E8EE; /*mid grey*/
+	--primary-color: #76997f; /*green*/
+	--secondary-color: #ffffff; /*white*/
+	--tertiary-color: #000000; /*black*/
+}
+
+/******************* NAVIGATION *********************/
+.navbar {
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--offset-color3);
+  width: 100%;
+}
+
+.dropdown-content .nav-link {
+  display: block;
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  cursor: pointer;
+  text-align: left;
+  margin: 0px 10px 16px 10px;
+  font-size: 18px;
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+  color: grey;
+}
+
+.dropdown-content .nav-link:hover {
+  background-color: var(--offset-color3);
+  color: var(--tertiary-color);
+  text-decoration: underline;
+}
+
+.home-link {
+  float: none;
+  text-align: none;
+  padding: 0px;
+  text-decoration: none;
+}
+.logo {
+  position: relative;
+  bottom: 5px;
+  float: left;
+  margin-left: 10px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+}
+.dropdown .dropbtn {
+	width: 100px;
+	height: 50px;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: var(--tertiary-color);
+  text-decoration: underline;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 160px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  padding-top: 10px;
+
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+.dropdown-content a:hover {
+  color: var(--tertiary-color);
+  text-decoration: underline;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropbtn {
+  cursor: pointer;
+}
+.dropbtn, .dropdown-content a{
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+}
+span.user{
+  color: grey;
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 10px;
+}
+hr {
+  width: 100%;
+}
+ /*** TOOLBAR ***/
+.toolbar{
+	position: absolute;
+	right: 25px;
+	top: 10px;
+}
+
+.cart-button {
+  width: 100px;
+  height: 38px;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 10px;
+  font-size: 16px;  
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+}
+
+.search-container{
+	float: right;
+	margin-top: 8px;
+	margin-left: 10px;
+	
+}
+.search-container input[type=text]{
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 1.2px;
+  padding: 6px;
+  font-size: 17px;
+  border: 1px solid var(--offset-color2);
+  border-radius: 4px;
+  font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 1px;
+  text-indent: 10px;
+  padding-right: 88px;
+	background: transparent;
+  width: 175px;
+	height: 23px;
+  outline: none;
+}
+
+.search-container button{
+  font-family: 'Roboto Slab', serif;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 4px;
+  width: 75px;
+  height: 28px;
+}
+
+@media only screen and (max-width: 775px) {
+  div.dropdown{display:none;}
+  .navbar{height: 50px;}
+}
+@media only screen and (max-width: 550px) {
+  .search-container{}
+}

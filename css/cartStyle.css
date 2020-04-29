@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root{
+	--offset-color: #e6e6e6; /*light grey*/
+	--offset-color2: #bfbfbf;/*dark grey*/
+	--offset-color3:#E1E8EE; /*mid grey*/
+	--primary-color: #76997f; /*green*/
+	--secondary-color: #ffffff; /*white*/
+	--tertiary-color: #000000; /*black*/
+}
+
+body{font-family: 'Roboto Slab', serif;}
+
+.shopping-cart{
+	float: left;
+	width: 75%;
+	height: 100%;
+	border-right: 1px solid var(--offset-color);
+	background: var(--secondary-color);
+	display: flex;
+	flex-direction: column;
+}
+.title{
+	height: 60px;
+	border-bottom: 1px solid var(--offset-color);
+	padding: 20px 30px;
+	color: #5E6977;
+	font-size: 18px;
+	font-weight: 400;
+}
+.item{
+	padding: 20px 30px;
+	height: 120px;
+	display: flex;
+}
+.item:nth-child(3){
+	border-top:  1px solid var(--offset-color);
+	border-bottom:  1px solid var(--offset-color);
+}
+.buttons{
+	position: relative;
+	padding-top: 30px;
+	margin-right: 60px;
+}
+.delete-btn {
+	display: inline-block;
+	cursor: pointer;
+	width: 18px;
+	height: 17px;
+	background: url(&quot;delete-icn.svg&quot;) no-repeat center;
+}
+.is-active{
+	animation-name: animate;
+	animation-duration: .8s;
+	animation-iteration-count: 1;
+	animation-timing-function: steps(28);
+	animation-fill-mode: forwards;
+}
+.name{
+	padding-top: 20px;
+	margin-right: 60px;
+	width: 300px;
+}
+.name span {
+	display: block;
+	font-size: 14px;
+	color: #43484D;
+	font-weight: 400;
+}
+.name span:first-child {margin-bottom: 5px;}
+.name span:last-child{
+	font-weight: 300;
+	margin-top: 8px;
+	color: #86939E;
+}
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: var(--offset-color);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+.price {
+	font-size: 15px;
+	color: grey;
+}
+.total-product-price {
+	float: right;
+	margin-left: 350px;
+	padding-top: 20px;
+
+}
+
+/*** ORDER DETAILS ***/
+.order-details {
+	margin-left: 75%;
+	width: 200px;
+	border-left: 1px solid var(--offset-color);
+}
+.subtotal, .tax-fee, .total-cart-price {
+	padding: 10px 10px 10px 20px;
+	font-size: 16px;
+	width: 500px;
+}
+.total-cart-price {
+	font-weight: bold;
+	font-size: 18px;
+}
+.checkout-button {
+	font-family: 'Roboto Slab', serif;
+	background: transparent;
+	color: var(--tertiary-color);
+	border-radius: 20px;
+	border: 2px solid var(--primary-color);
+	font-size: 12px;
+	padding: 12px 45px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	left: 70px;
+	margin: 20px 0 20px 0;
+	float: left;
+	cursor: pointer;
+}
+.checkout-button:hover {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+/***** SNACKBAR *****/
+#snackbar{
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+}
+#snackbar.show{
+	-webkit-animation: fadein 4.5s, fadeout 1.5s 5.5s;
+	animation: fadein 4.5s, fadeout 1.5s 5.5s;
+}
+@-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0; visibility: visible;} 
+	to {bottom: 50px; opacity: 1;}
+}
+@keyframes fadein {
+	from {bottom: 0; opacity: 0; visibility: visible;}
+	to {bottom: 50px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+	from {bottom: 50px; opacity: 1;} 
+	to {bottom: 0; opacity: 0; visibility: hidden;}
+}
+@keyframes fadeout {
+	from {bottom: 50px; opacity: 1;}
+	to {bottom: 0; opacity: 0; visibility: hidden;}
+}
+
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .quantity, .name {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}

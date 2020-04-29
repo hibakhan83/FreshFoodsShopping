@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root{
+	--offset-color: #e6e6e6; /*light grey*/
+	--offset-color2: #bfbfbf;/*dark grey*/
+	--primary-color: #76997f; /*green*/
+	--secondary-color: #ffffff; /*white*/
+	--tertiary-color: #000000; /*black*/
+}
+body{
+	background-image: url("../images/produce.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Roboto Slab', serif;
+	position: relative;
+}
+h2, button, #sign-in-button{
+	font-weight: bold;
+}
+
+p, a{
+	font-size: 14px;
+	margin: 20px 0 20px;
+}
+a{
+	text-decoration: none;
+	color: var(--tertiary-color);
+}
+a:hover{
+	text-decoration: underline;
+}
+button, #sign-in-button {
+	background: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 20px;
+	border: 1px solid var(--secondary-color);
+	font-size: 12px;
+	padding: 12px 45px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	margin: 10px;
+	font-family: 'Roboto Slab', serif;
+}
+button, #sign-in-button:hover{
+	cursor: pointer;
+}
+button.ghost {
+	background-color: transparent;
+	border-color: var(--secondary-color);
+}
+input{
+	background-color: #eee;
+	border-radius: 3px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 300px;
+	outline: none;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing: 1.2px;
+}
+
+.container{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+	height: 375px;
+	background: var(--secondary-color);
+	display: flex;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	overflow: hidden;
+	text-align: center;
+}
+.sign-in-container{
+	padding-top: 50px;
+	width: 60%;
+
+}
+.sign-up-container{
+	background: var(--primary-color);
+	color: var(--secondary-color);
+	flex-grow: 1;
+	padding-top: 80px;
+}
+.header{
+	width: 101%;
+	height: 60px;
+	position: absolute;
+	top: -8px;
+	left: -6px;
+	background-color: var(--primary-color);
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.logo {
+  position: relative;
+  bottom: 2px;
+  float: left;
+  margin-left: 10px;
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root{
+	--offset-color: #e6e6e6; /*light grey*/
+	--offset-color2: #bfbfbf;/*dark grey*/
+	--offset-color3: #E1E8EE; /*mid grey*/
+	--primary-color: #76997f; /*green*/
+	--secondary-color: #ffffff; /*white*/
+	--tertiary-color: #000000; /*black*/
+}
+
+body {font-family: 'Roboto Slab', serif;}
+
+.breadcrumbs {
+	height: 50px;
+	border-bottom: 1px solid var(--offset-color);
+}
+.body-container {
+	overflow: hidden;
+}
+.side-bar {
+	float: left;
+	width: 16%;
+	height: 100%;
+	border-right: 1px solid var(--offset-color);
+}
+.side-bar-link {
+	background: none!important;
+	border: none;
+	padding: 0!important;
+	cursor: pointer;
+	text-align: left;
+	margin: 0px 0px 5px 0px;
+	font-size: 16px;
+	color: grey;
+	font-family: 'Roboto Slab', serif;
+}
+.side-bar-link:hover {
+	color: var(--tertiary-color);
+	text-decoration: underline;
+}
+.bold {
+	font-weight: bold;
+}
+h3 {
+	padding-left: 10px;
+}
+ul {
+	padding-left: 10px;
+}
+li {
+	margin: 15px 0 10px 10px;
+	list-style-type: none;
+}
+.product-grid-container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: auto auto auto; 
+	margin-left: 16%;
+	padding: 25px;
+}
+.product-grid-item {
+	font-size: 12px;
+	width: 250px; 
+	margin-bottom: 50px;
+}
+.product-grid-item a {
+	text-decoration: none;
+	color: var(--tertiary-color);
+}
+.item-preview {
+	margin-bottom: 10px;
+}
+.product-name {
+	width: 260px;
+	margin-left: 5px;
+	font-size: 14px;
+}
+.product-price {
+	margin-left: 5px;
+	margin-top: 6px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.results {
+	position: absolute;
+	font-size: 12px;
+	top: 78px;
+	left: 250px;
+}

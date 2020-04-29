@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root{
+	--offset-color: #e6e6e6; /*light grey*/
+	--offset-color2: #bfbfbf;/*dark grey*/
+	--offset-color3: #E1E8EE; /*mid grey*/
+	--primary-color: #76997f; /*green*/
+	--secondary-color: #ffffff; /*white*/
+	--tertiary-color: #000000; /*black*/
+}
+
+body {font-family: 'Roboto Slab', serif;
+}
+
+
+h1{ 
+	text-align: center;
+	color: var(--primary-color);
+
+}
+
+h3{
+	text-align: center;
+	font-weight: bold;
+}
+h4{
+	text-align: center;
+	font-weight: bold;
+	color: var(--offset-color2);
+	margin-right: 150px;
+	margin-left: 150px;
+}
+
+.center{
+	text-align: center;
+}
+.FAQbold{
+	font-weight: bold;
+	margin-left: 150px;
+}
+
+.FAQtab{
+	margin-left: 225px;
+	font-size: 10pt;
+}
+
+.abouttab {
+	margin-left: 175px;
+	margin-right: 225px;
+	text-align: center;
+	font-size: 14pt;
+
+}
+
+
+.contactC{
+	float: left;
+	flex: 50%;
+ 	padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.contactR {
+	margin-left: 37%;
+	box-sizing: border-box;
+}
+
+.title {
+	color: var(--primary-color);
+	letter-spacing: 10px;
+	text-align: center;
+	font-size: 40pt;
+}
+
+.row {
+	margin-top: 10px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Container or image grid for recipes */
+.crop {
+	width : 200px;
+	height : 150px;
+	overflow : hidden;
+}
+
+.crop img {
+	width : 400px;
+	height : 300px;
+	margin : -75px 0 0 -100px;
+}
+.imageGrid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	float: left;
+	width: 15%;
+	padding: 10px;
+}
+
+.gridImage {
+	width: 100%;
+	height : 250px;
+	display: block;
+}
+
+p.textUnderImage {
+	margin: 0 0 20px 0;
+	text-align: center;
+	color: var(--primary-color);
+}
+
+/*All classes below this is are for the hover effect on images */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: ivory;
+}
+
+.containerimg {
+	position: relative;
+	width: 100%;
+}
+
+.containerimg:hover .overlay {
+	opacity: 90%;
+}
+.text {
+	color: var(--primary-color);
+	font-size: 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}

@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root{
+	--offset-color: #e6e6e6; /*light grey*/
+	--offset-color2: #bfbfbf;/*dark grey*/
+	--offset-color3:#E1E8EE; /*mid grey*/
+	--primary-color: #76997f; /*green*/
+	--secondary-color: #ffffff; /*white*/
+	--tertiary-color: #000000; /*black*/
+}
+body{font-family: 'Roboto Slab', serif;}
+
+
+/******************* MAIN CONTAINERS *********************/
+#product-details-container{
+	height: 100%;
+}
+.flex-container{
+	text-align: center;
+	display: flex;
+}
+.body-wrapper{
+	background: var(--secondary-color);
+	overflow: hidden;
+	border-radius: 10px;
+	margin: 20px 75px 0px 75px;
+	box-shadow: 10px 8px 28px rgba(0,0,0,0.25);
+}
+
+/******************* PRODUCT IMAGE CONTAINER *********************/
+.product-image-container{
+	width: 50%;
+	margin-left: 75px;
+	margin-top: 25px;
+	margin-right: 5px;
+}
+.product-image{
+	width: 42vw;
+	height: 75vh;
+	
+}
+
+/******************* PRODUCT INFO CONTAINER *********************/
+.product-info-container{
+	flex-grow: 1;
+	
+}
+.product-details{
+	display: grid;
+	margin-top: 25px;
+}
+
+p.back-link{
+	width: 100%;
+	height: 15px;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+p.back-link a{
+	float: left;
+	text-decoration: none;
+	color: var(--primary-color);
+	margin-left: 75px;
+}
+p.back-link a:before{
+	content: '\2190';
+}
+h1.title{
+	float: left;
+	width: 75%;
+	font-size: 2.88vw;
+	font-weight: 100;
+	text-align: left;
+	margin: 0px 0px 0px 75px;
+}
+h2.price{
+	float: left;
+	width: 75%;
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing: 0.5px;
+	text-align: left;
+	margin: 0px 0px 0px 75px;
+}
+
+	/*** QUANTITY INPUT ***/
+.quantity{
+	text-align: left;
+	padding-top: 20px;
+	margin-left: 75px;
+}
+.quantity input{
+	font-family: 'Roboto Slab', serif;
+	appearance: none;
+	-webkit-appearance: none;
+  	border: none;
+  	text-align: center;
+  	width: 32px;
+  	font-size: 16px;
+  	color: var(--tertiary-color);
+  	font-weight: 300;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+button[class*=btn] {
+  font-family: 'Roboto Slab', serif;
+  width: 30px;
+  height: 30px;
+  background-color: var(--offset-color3);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+
+	/*** ADD TO LIST BUTTON ***/
+.add-to-list-button{
+	background: transparent;
+	color: var(--tertiary-color);
+	border-radius: 20px;
+	border: 2px solid var(--primary-color);
+	font-size: 12px;
+	padding: 12px 45px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	left: 70px;
+	margin: 50px 0 50px 0;
+	float: left;
+	cursor: pointer;
+	
+}
+.add-to-list-button:hover{
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+
+	/*** COLLAPSIBLE ***/
+.collapse {
+	font-family: 'Roboto Slab', serif;
+	position: relative;
+	right: 25px;
+	background-color: transparent;
+	color: var(--tertiary-color);
+	border: none;
+	cursor: pointer;
+	border-bottom: 1px solid var(--tertiary-color);
+	padding: 25px;
+	margin-bottom: 15px;
+	text-align: left;
+	font-size: 2.20vw;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	width: 70%;
+}
+.collapse:after{
+	content: '\02C7';
+	float: right;
+	margin-left: 15px;
+
+}
+.active:after{
+	content: '\02C6';
+}
+.content{
+	background-color: transparent;
+	display: block;
+	width: 70%;
+	margin-left: 60px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+.content p{
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+}
+
+/***** SNACKBAR *****/
+#snackbar{
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+}
+#snackbar.show{
+	-webkit-animation: fadein 4.5s, fadeout 1.5s 5.5s;
+	animation: fadein 4.5s, fadeout 1.5s 5.5s;
+}
+@-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0; visibility: visible;} 
+	to {bottom: 50px; opacity: 1;}
+}
+@keyframes fadein {
+	from {bottom: 0; opacity: 0; visibility: visible;}
+	to {bottom: 50px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+	from {bottom: 50px; opacity: 1;} 
+	to {bottom: 0; opacity: 0; visibility: hidden;}
+}
+@keyframes fadeout {
+	from {bottom: 50px; opacity: 1;}
+	to {bottom: 0; opacity: 0; visibility: hidden;}
+}
+
+/******************* FOOTER *********************/
+footer{
+	height: 150px;
+	width: 100%;
+	margin-top: 100px;
+	background-color: var(--offset-color2);
+}
+
+/******************* WINDOW RESIZE CONFIG *********************/
+@media screen and (max-width: 1300px){
+	
+}
+
+@media screen and (max-width: 900px){
+	.flex-container{
+		display: block;
+	}
+  	.product-image-container{
+  		width: 100%;
+  		margin: 25px 0px 0px 0px;
+  	}
+  	.product-image{
+  		width: 570px;
+  		height: 570px;
+  	}
+  	.prodcut-details{
+  		height: 100px;
+  	} 
+  	p.back-link a, p.back-link{
+		margin-bottom: 20px;
+		margin-left: 25px;
+	}
+	h1.title{
+		font-size: 20px;
+		float: left;
+		margin-left: 50px;
+	}
+	h2.price{
+		margin-left: 50px;
+	}
+	.quantity{
+		margin-left: 50px;
+	}
+	.add-to-list-button{
+		width: 75%;
+	}
+	.collapse{
+		padding-bottom: 10px;
+		font-size: 24px;
+	}
+
+}
